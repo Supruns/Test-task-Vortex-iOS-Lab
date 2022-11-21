@@ -1,0 +1,22 @@
+func makeItCool(_ string: String) -> String {
+    let replacedCharacters: [String] = string
+        .map { character in
+            switch character.lowercased() {
+            case "a":
+                return "@"
+            case "i":
+                return "1"
+            case "s":
+                return "$"
+            case "o":
+                return "0"
+            case "t":
+                return "+"
+            default:
+                return String(character)
+            }
+        }
+    let replacedString = replacedCharacters.joined()
+    
+    return replacedString
+}
